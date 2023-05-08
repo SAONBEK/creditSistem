@@ -1,0 +1,15 @@
+body{
+background-image: url(./image/2fe6c48881e258b6ba4df177e556debb0920.jpg);
+}
+
+.padding{
+
+    padding: 1rem !important;
+}
+
+
+
+.form-control:focus {
+   box-shadow: 10px 0px 0px 0px #ffffff !important;
+   border-color: #7227c9;
+}

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ceredir sistem</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css" />
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+</head>
+<style>
+    body {
+        background-color: aqua;
+    }
+</style>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-black">
+        <a class="navbar-brand offset-2 text-white" href="#">Credit<span style="color:red ;">Sistem</span> </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link text-white" href="./index.html">To'lov</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#">Biz haqimizda</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link  text-white" href="#">Xabarlar</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link  text-white" href="#">Yordam</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link  text-white" href="./laon.html">Credit Olish</a>
+                </li>
+            </ul>
+            <form class="form-inline d-flex offset-2">
+                <input class="form-control " type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+    <section class="section">
+        <div class="container">
+            <div class="content">
+                <h1>
+                    Kredit kalkulyatori</h1>
+                <p>
+                    Oddiy kredit kalkulyatori kredit summalari, <br> foiz stavkalari va shartlari bo'yicha taxminiy
+                    to'lovingizni aniqlaydi.
+                </p>
+            </div>
+
+            <div class="columns">
+                <div class="column is-three-quarters">
+                    <div class="card">
+                        <div class="card-content">
+                            <form id="loan-form">
+                                <div class="level">
+                                    <!-- Left side -->
+                                    <div class="level-left is-marginless">
+                                        <div class="level-item">
+                                            <p class="number">1</p>
+                                            Kredit miqdori
+                                        </div>
+                                    </div>
+                                    <!-- Right side -->
+                                    <div class="level-right">
+                                        <div class="level-item">
+                                            <div class="field">
+                                                <div class="control has-icons-left ">
+                                                    <input class="input" id="amount" type="number" />
+                                                    <span class="icon is-small is-left">
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="level">
+                                    <!-- Left side -->
+                                    <div class="level-left is-marginless">
+                                        <div class="level-item">
+                                            <p class="number">2</p>
+                                         foizi
+                                        </div>
+                                    </div>
+
+                                    <!-- Right side -->
+                                    <div class="level-right">
+                                        <div class="level-item">
+                                            <div class="field">
+                                                <div class="control has-icons-left">
+                                                    <input class="input" id="interest" type="number" />
+                                                    <span class="icon is-small is-left">
+                                                        <i class="fa fa-percentage"></i>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="level">
+                                    <!-- Left side -->
+                                    <div class="level-left is-marginless">
+                                        <div class="level-item">
+                                            <p class="number">3</p>
+                                          Necha yilga
+                                        </div>
+                                    </div>
+
+                                    <!-- Right side -->
+                                    <div class="level-right">
+                                        <div class="level-item">
+                                            <div class="field">
+                                                <div class="control has-icons-left">
+                                                    <input class="input" id="years" type="number" />
+                                                    <span class="icon is-small is-left">
+                                                        <i class="fa fa-calendar"></i>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="control">
+                                    <button class="button is-large is-fullwidth is-primary is-outlined">
+                                        Hisoblash
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- RESULTS -->
+    <section class="section">
+        <h1 class="title ">Hisoblangan pull!</h1>
+        <div class="columns is-multiline">
+
+            <div class="column is-12-tablet is-6-desktop is-3-widescreen">
+                <div class="notification is-primary has-text">
+                    <p id="monthlyPayment" class="title is-1">so'm</p>
+                    <p class="subtitle is-4">Oyiga</p>
+                </div>
+            </div>
+
+            <div class="column is-12-tablet is-6-desktop is-3-widescreen">
+                <div class="notification is-info has-text">
+                    <p id="totalInterest" class="title is-1">%</p>
+                    <p class="subtitle   is-4">foiz summasi</p>
+                </div>
+            </div>
+
+            <div class="column is-12-tablet is-6-desktop is-3-widescreen">
+                <div class="notification is-link has-text">
+                    <p id="totalPayment" class="title is-1">so'm</p>
+                    <p class="subtitle is-4">Yillik summa</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+</body>
+<script src="./js/jquery-3.3.1.slim.min.js"></script>
+<script src="./js/bootstrap.js"></script>
+<script src="./js/popper.min.js"></script>
+<script src="./main.js"></script>
+</html>
